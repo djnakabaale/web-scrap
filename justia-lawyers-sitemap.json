@@ -1,0 +1,143 @@
+{
+  "_id": "all-states-justia-lawyers",
+  "startUrl": [
+    "https://www.justia.com/lawyers/immigration-law/alabama",
+    "https://www.justia.com/lawyers/immigration-law/alaska",
+    "https://www.justia.com/lawyers/immigration-law/arizona",
+    "https://www.justia.com/lawyers/immigration-law/arkansas",
+    "https://www.justia.com/lawyers/immigration-law/california",
+    "https://www.justia.com/lawyers/immigration-law/colorado",
+    "https://www.justia.com/lawyers/immigration-law/connecticut",
+    "https://www.justia.com/lawyers/immigration-law/delaware",
+    "https://www.justia.com/lawyers/immigration-law/dc/washington-dc",
+    "https://www.justia.com/lawyers/immigration-law/florida",
+    "https://www.justia.com/lawyers/immigration-law/georgia",
+    "https://www.justia.com/lawyers/immigration-law/hawaii",
+    "https://www.justia.com/lawyers/immigration-law/idaho",
+    "https://www.justia.com/lawyers/immigration-law/illinois",
+    "https://www.justia.com/lawyers/immigration-law/indiana",
+    "https://www.justia.com/lawyers/immigration-law/iowa",
+    "https://www.justia.com/lawyers/immigration-law/kansas",
+    "https://www.justia.com/lawyers/immigration-law/kentucky",
+    "https://www.justia.com/lawyers/immigration-law/louisiana",
+    "https://www.justia.com/lawyers/immigration-law/maine",
+    "https://www.justia.com/lawyers/immigration-law/maryland",
+    "https://www.justia.com/lawyers/immigration-law/massachusetts",
+    "https://www.justia.com/lawyers/immigration-law/michigan",
+    "https://www.justia.com/lawyers/immigration-law/minnesota",
+    "https://www.justia.com/lawyers/immigration-law/mississippi",
+    "https://www.justia.com/lawyers/immigration-law/missouri",
+    "https://www.justia.com/lawyers/immigration-law/montana",
+    "https://www.justia.com/lawyers/immigration-law/nebraska",
+    "https://www.justia.com/lawyers/immigration-law/nevada",
+    "https://www.justia.com/lawyers/immigration-law/new-hampshire",
+    "https://www.justia.com/lawyers/immigration-law/new-jersey",
+    "https://www.justia.com/lawyers/immigration-law/new-mexico",
+    "https://www.justia.com/lawyers/immigration-law/new-york",
+    "https://www.justia.com/lawyers/immigration-law/north-carolina",
+    "https://www.justia.com/lawyers/immigration-law/north-dakota",
+    "https://www.justia.com/lawyers/immigration-law/ohio",
+    "https://www.justia.com/lawyers/immigration-law/oklahoma",
+    "https://www.justia.com/lawyers/immigration-law/oregon",
+    "https://www.justia.com/lawyers/immigration-law/pennsylvania",
+    "https://www.justia.com/lawyers/immigration-law/rhode-island",
+    "https://www.justia.com/lawyers/immigration-law/south-carolina",
+    "https://www.justia.com/lawyers/immigration-law/south-dakota",
+    "https://www.justia.com/lawyers/immigration-law/tennessee",
+    "https://www.justia.com/lawyers/immigration-law/texas",
+    "https://www.justia.com/lawyers/immigration-law/utah",
+    "https://www.justia.com/lawyers/immigration-law/vermont",
+    "https://www.justia.com/lawyers/immigration-law/virginia",
+    "https://www.justia.com/lawyers/immigration-law/washington",
+    "https://www.justia.com/lawyers/immigration-law/west-virginia",
+    "https://www.justia.com/lawyers/immigration-law/wisconsin",
+    "https://www.justia.com/lawyers/immigration-law/wyoming"
+  ],
+  "selectors": [
+    {
+      "id": "lawyer",
+      "parentSelectors": ["_root", "pagination"],
+      "type": "SelectorLink",
+      "selector": "a.main-profile-link",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "Description",
+      "parentSelectors": ["lawyer"],
+      "type": "SelectorText",
+      "selector": "#biography div.block",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "Website",
+      "parentSelectors": ["lawyer"],
+      "type": "SelectorLink",
+      "selector": "a[aria-label='Website 1']",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "Office-info",
+      "parentSelectors": ["lawyer"],
+      "type": "SelectorGroup",
+      "selector": "div.office",
+      "delay": 0,
+      "extractAttribute": "class"
+    },
+    {
+      "id": "Name of Business",
+      "parentSelectors": ["lawyer"],
+      "type": "SelectorText",
+      "selector": ".flex-col div > strong",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "Address",
+      "parentSelectors": ["lawyer"],
+      "type": "SelectorText",
+      "selector": "div.street-address",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "City",
+      "parentSelectors": ["lawyer"],
+      "type": "SelectorText",
+      "selector": "span.locality",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "State",
+      "parentSelectors": ["lawyer"],
+      "type": "SelectorText",
+      "selector": "span.region",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "pagination",
+      "parentSelectors": ["_root", "pagination"],
+      "type": "SelectorLink",
+      "selector": ".next a",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "Profile Picture",
+      "parentSelectors": ["lawyer"],
+      "type": "SelectorImage",
+      "selector": "img[itemprop='image']",
+      "multiple": false,
+      "delay": 0
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "_id": "all-states-non-profits",
+  "startUrl": [
+    "https://greatnonprofits.org/state/Alabama/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Alaska/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Arizona/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Arkansas/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/California/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Colorado/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Connecticut/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Delaware/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/District%20of%20Columbia/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Florida/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Georgia/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Hawaii/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Idaho/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Illinois/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Indiana/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Iowa/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Kansas/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Kentucky/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Louisiana/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Maine/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Maryland/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Massachusetts/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Michigan/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Minnesota/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Mississippi/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Missouri/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Montana/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Nebraska/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Nevada/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/New%20Hampshire/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/New%20Jersey/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/New%20Mexico/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/New%20York/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/North%20Carolina/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/North%20Dakota/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Ohio/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Oklahoma/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Oregon/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Pennsylvania/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Rhode%20Island/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/South%20Carolina/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/South%20Dakota/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Tennessee/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Texas/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Utah/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Vermont/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Virginia/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Washington/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/West%20Virginia/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Wisconsin/category:Immigration/sort:review_count/direction:desc",
+    "https://greatnonprofits.org/state/Wyoming/category:Immigration/sort:review_count/direction:desc"
+  ],
+  "selectors": [
+    {
+      "id": "link",
+      "parentSelectors": ["_root", "pagination"],
+      "type": "SelectorLink",
+      "selector": ".gnp-searchResult-infoMajor h2 a",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "Organization Name",
+      "parentSelectors": ["link"],
+      "type": "SelectorText",
+      "selector": "h1",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "profile picture",
+      "parentSelectors": ["link"],
+      "type": "SelectorImage",
+      "selector": "img[itemprop='image']",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "EIN Number",
+      "parentSelectors": ["link"],
+      "type": "SelectorText",
+      "selector": "li:nth-of-type(1) span:nth-of-type(2)",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "Phone",
+      "parentSelectors": ["link"],
+      "type": "SelectorText",
+      "selector": "span[itemprop='telephone']",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "website",
+      "parentSelectors": ["link"],
+      "type": "SelectorLink",
+      "selector": "a.link-shortcut",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "street address",
+      "parentSelectors": ["link"],
+      "type": "SelectorText",
+      "selector": "span[itemprop='streetAddress']",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "city",
+      "parentSelectors": ["link"],
+      "type": "SelectorText",
+      "selector": "span[itemprop='addressLocality']",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "state",
+      "parentSelectors": ["link"],
+      "type": "SelectorText",
+      "selector": "span[itemprop='addressRegion']",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "zip",
+      "parentSelectors": ["link"],
+      "type": "SelectorText",
+      "selector": "span[itemprop='postalCode']",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "country",
+      "parentSelectors": ["link"],
+      "type": "SelectorText",
+      "selector": "span[itemprop='addressCountry']",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "overview",
+      "parentSelectors": ["link"],
+      "type": "SelectorText",
+      "selector": "#np-content > div.np-overview.gnp-show-more",
+      "multiple": false,
+      "delay": 0,
+      "regex": ""
+    },
+    {
+      "id": "pagination",
+      "parentSelectors": ["_root", "pagination"],
+      "paginationType": "linkFromHref",
+      "selector": ".pagination li:nth-of-type(n+3) a",
+      "type": "SelectorPagination"
+    }
+  ]
+}
